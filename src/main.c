@@ -1,38 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   utils.c                                            :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/05/28 15:53:35 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/28 16:23:42 by cavan-vl      ########   odam.nl         */
+/*   Created: 2024/05/28 14:37:08 by cavan-vl      #+#    #+#                 */
+/*   Updated: 2024/05/29 17:01:55 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/philosophers.h"
+#include "philosophers.h"
 
-int	ft_atoi(const char *arg)
+int main(int ac, char **av)
 {
-	int	i;
-	int	r;
+	t_data *data;
 
-	i = 0;
-	r = 0;
-	if (!arg)
-		return (0);
-	while ((arg[i] >= 9 && arg[i] <= 13) || arg[i] == 32)
-		i++;
-	if (arg[i] == '-' || arg[i] == '+')
-	{
-		if (arg[i] == '-')
-			//error?;
-		i++;
-	}
-	while (ft_isdigit(arg[i]))
-	{
-		r = r * 10 + arg[i] - '0';
-		i++;
-	}
-	return (r);
+	if (ac != 4 || ac != 5)
+		error_msg(INV_ARG);
+	init_struct(av, data);
+	create_threads(data);
 }

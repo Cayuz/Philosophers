@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   parse.c                                            :+:    :+:            */
+/*   threads.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2024/05/28 15:42:25 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/28 16:29:09 by cavan-vl      ########   odam.nl         */
+/*   Created: 2024/05/29 16:59:08 by cavan-vl      #+#    #+#                 */
+/*   Updated: 2024/05/29 17:02:34 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/philosophers.h"
+#include "philosophers.h"
 
-void	parse(char **args, int check)
+int	create_threads(t_data *data)
 {
-	if (!ft_atoi(args[1]) || !ft_atoi(args[2]) || !ft_atoi(args[3])
-		|| !ft_atoi(args[4]) || (check && !ft_atoi(args[5])))
-		//error;
-	
+	pthread_create();
 }
