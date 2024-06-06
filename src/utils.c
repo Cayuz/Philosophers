@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 15:53:35 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/29 17:01:49 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/06/06 16:07:52 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,17 @@ static int strtoi(char *arg)
 	return (result);
 }
 
-void init_struct(char **arg, t_data *data)
+void init_struct(char **av, t_data *data)
 {
-	
-	data->philos = strtoi(arg[1]);
-	data->die_time = strtoi(arg[2]);
-	data->eat_time = strtoi(arg[3]);
-	data->sleep_time = strtoi(arg[4]);
-	if (arg[5])
-		data->num_eat_time = strtoi(arg[5]);
+	t_data *data;
+
+	data = (t_data *)malloc(sizeof(t_data));
+	data->philos = strtoi(av[1]);
+	data->die_time = strtoi(av[2]);
+	data->eat_time = strtoi(av[3]);
+	data->sleep_time = strtoi(av[4]);
+	if (av[5])
+		data->num_eat_time = strtoi(av[5]);
 	else
 		data->num_eat_time = 0;
 }

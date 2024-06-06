@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/28 14:37:35 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/29 16:57:08 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/06/06 15:28:11 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_data
 	int	sleep_time;
 	int	die_time;
 	int	num_eat_time;
+	int	ac;
 }	t_data;
 
 /*===============================FUNCTIONS====================================*/
